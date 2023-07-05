@@ -16,6 +16,7 @@
               <input
                 type="text"
                 class="form-control"
+                required
                 formControlName="firstName"
                 placeholder="Enter Full Name "
               />
@@ -25,6 +26,7 @@
               <input
                 type="tel"
                 class="form-control"
+                required
                 formControlName="phonwNo"
                 placeholder="Phone Number"
               />
@@ -33,6 +35,7 @@
               <input
                 type="email"
                 class="form-control"
+                required
                 formControlName="email"
                 placeholder="Enter Email"
               />
@@ -41,6 +44,7 @@
               <input
                 type="date"
                 class="form-control"
+                required
                 formControlName="date"
                 placeholder="select date"
               />
@@ -51,6 +55,7 @@
                 <input
                   type="text"
                   class="form-control"
+                  required
                   formControlName="area"
                   placeholder="Enter Area"
                 />
@@ -59,6 +64,7 @@
                 <input
                   type="text"
                   class="form-control"
+                  required
                   formControlName="city"
                   placeholder="Enter City"
                 />
@@ -69,6 +75,7 @@
                 <input
                   type="text"
                   class="form-control"
+                  required
                   formControlName="pin"
                   placeholder="Enter Pin Code"
                 />
@@ -77,13 +84,14 @@
                 <input
                   type="text"
                   class="form-control"
+                  required
                   formControlName="state"
                   placeholder="Enter state"
                 />
               </div>
             </div>
             <div>
-              <button type="submit" class="btn btn-primary float-end">
+              <button type="submit" class="btn btn-primary float-end" [disabled]="!profileForm.valid">
                 {{
                   bkServ.selectedBookIndex === null
                     ? "Book Appointment"
